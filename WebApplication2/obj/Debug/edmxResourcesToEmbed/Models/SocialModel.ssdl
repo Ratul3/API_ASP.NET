@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SocialModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Social.dbo.posts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="posts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="SocialModelStoreContainer">
+    <EntitySet Name="posts" EntityType="Self.posts" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[posts].[id] AS [id], 
+[posts].[status] AS [status]
+FROM [dbo].[posts] AS [posts]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

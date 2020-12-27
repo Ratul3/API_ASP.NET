@@ -1,0 +1,13 @@
+﻿[
+{
+ "id": 1,
+    "status": "yo",
+    "Links":[
+    {"Uri"="http://localhost:58618/api/posts/1", "Method"="GET", "Rel"="Self"},
+    {"Uri"="http://localhost:58618/api/posts", "Method"="GET", "Rel"="Get All"},
+    {"Uri"="http://localhost:58618/api/posts/", "Method"="Post", "Rel"="New"},
+    {"Uri"="http://localhost:58618/api/posts/1", "Method"="PUT", "Rel"="Update"},
+    {"Uri"="http://localhost:58618/api/posts/1", "Method"="DELETE", "Rel"="Delete",}
+    ]
+}
+]
